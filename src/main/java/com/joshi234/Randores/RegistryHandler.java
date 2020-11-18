@@ -77,7 +77,7 @@ public class RegistryHandler {
             ));
     public static final RegistryObject<Item> ORE_BLOCK_ITEM= ITEMS.register("oreblock", () ->
             new OreItem(
-                    COPPER_ORE.get(),
+                    ORE_BLOCK.get(),
                     new Item.Properties().group(Randores.ITEM_GROUP).addToolType(ToolType.PICKAXE,2)
             ).setId(0)
     );
