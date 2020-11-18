@@ -21,7 +21,7 @@ public  class RegistryEvents {
         BlockColors colors = colorHandlerEvent.getBlockColors();
         colors.register((state, reader, pos, color) -> {
             return Randores.randomColor[0];
-        },RegistryHandler.COPPER_ORE.get());
+        },RegistryHandler.COPPER_ORE.get(),RegistryHandler.ORE_BLOCK.get());
         colors.register((state, reader, pos, color) -> {
             return Randores.randomColor[1];
         },RegistryHandler.ORE1_ORE.get());
@@ -33,7 +33,7 @@ public  class RegistryEvents {
         ItemColors colors = colorHandlerEvent.getItemColors();
         colors.register((stack,color) ->{
             return Randores.randomColor[0];
-        },RegistryHandler.COPPER_ORE_ITEM.get().getItem(),RegistryHandler.COPPER.get().getItem());
+        },RegistryHandler.COPPER_ORE_ITEM.get().getItem(),RegistryHandler.COPPER.get().getItem(),RegistryHandler.ORE_BLOCK_ITEM.get());
         colors.register((stack,color) ->{
             return Randores.randomColor[1];
         },RegistryHandler.ORE1_ITEM.get().getItem(),RegistryHandler.ORE1.get().getItem());
