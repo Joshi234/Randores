@@ -66,7 +66,21 @@ public class RegistryHandler {
                             .harvestTool(ToolType.PICKAXE)
             )
     );
-
+    public static final RegistryObject<Block> ORE_BLOCK = BLOCKS.register("oreblock",() ->
+            new Block(
+                    Block.Properties
+                            .create(Material.IRON)
+                            .hardnessAndResistance(3.0f, 3.0f)
+                            .sound(SoundType.STONE)
+                            .harvestLevel(1)
+                            .harvestTool(ToolType.PICKAXE)
+            ));
+    public static final RegistryObject<Item> ORE_BLOCK_ITEM= ITEMS.register("oreblock", () ->
+            new OreItem(
+                    COPPER_ORE.get(),
+                    new Item.Properties().group(Randores.ITEM_GROUP).addToolType(ToolType.PICKAXE,2)
+            ).setId(0)
+    );
     public static final RegistryObject<Item> COPPER_ORE_ITEM = ITEMS.register("ore", () ->
             new OreItem(
                     COPPER_ORE.get(),
